@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function penjumlahanPerkalian(a, b) {
+        return [a + b, b * a];
+      }
+      const jumlah = penjumlahanPerkalian(2, 3)[0];
+      const kali = penjumlahanPerkalian(2, 3)[1];
+      console.log(jumlah);
+      console.log(kali);
+
+      const [penjumlahan, perkalian] = penjumlahanPerkalian(5, 6);
+      console.log(penjumlahan);
+      console.log(perkalian);
+
+      function kalkulasi(a, b) {
+        return {
+          tambah: a + b,
+          kurang: a - b,
+          kalii: a * b,
+          bagi: a / b,
+        };
+      }
+
+      const { kurang, tambah, bagi, kalii } = kalkulasi(8, 6);
+      console.log(kalii);
+
+    //   Destructuring function Arguments
+    </script>
+  </body>
+</html>

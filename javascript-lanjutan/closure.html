@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function init(){
+      //     return function (name){
+      //         console.log(name)
+      //     }
+      // }
+      // let panggilName = init();
+      // panggilName("Insanie");
+
+      // ==========Menggunakan Closure=============
+      //   function ucapanSalam(waktu) {
+      //     return function (name) {
+      //       console.log(`Hallo ${name},semoga  ${waktu} hari mu menyenangkan `);
+      //     };
+      //   }
+
+      //   let selamatPagi  = ucapanSalam("Pagi")
+      //   selamatPagi("insanie")
+      //   let selamatSiang  = ucapanSalam("Siang")
+      //   selamatSiang("Diah Insani")
+      //   let selamatMalam  = ucapanSalam("Malam")
+      //   selamatMalam("Alisia")
+
+      let add = (function () {
+        let counter = 0;
+        return function () {
+          return ++counter;
+        };
+      })();
+
+      counter = 100;
+      console.log(add());
+      console.log(add());
+      console.log(add());
+      console.log(add());
+      console.log(add());
+      console.log(add());
+      console.log(add());
+      console.log(add());
+      console.log(add());
+    </script>
+  </body>
+</html>

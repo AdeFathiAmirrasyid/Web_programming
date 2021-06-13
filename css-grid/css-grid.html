@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Grid</title>
+    <style>
+      .container {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        border: 5px solid black;
+        width: 500px;
+        height: auto;
+        padding: 3px;
+        font-size: 32px;
+      }
+      .satu,
+      .lima {
+        width: 500px;
+        height: 100px;
+        background-color: blueviolet;
+        line-height: 100px;
+      }
+      .lima {
+        background-color: gray;
+      }
+      .dua,
+      .tiga {
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        background-color: skyblue;
+        
+      }
+      .tiga {
+        background-color: red;
+        float: left;
+      }
+      .empat {
+        width: 300px;
+        height: 200px;
+        background-color: orange;
+        margin-top: -100px;
+        margin-left: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="satu">Header</div>
+      <div class="dua">Aside</div>
+      <div class="tiga">Nav</div>
+      <div class="empat">Main</div>
+      <div class="lima">Footer</div>
+    </div>
+  </body>
+</html>

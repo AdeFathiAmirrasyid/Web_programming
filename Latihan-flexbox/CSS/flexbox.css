@@ -1,0 +1,144 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    line-height: 1.65;
+    padding-bottom: 2000px;
+}
+
+/* Latihan 1 - Flexbox   */
+.container-satu{
+    max-width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+.kolom-utama{
+flex: 3;
+order: 2;
+}
+.sidebar-satu{
+flex: 1;
+order: 1;
+}
+.sidebar-dua{
+flex: 1;
+order: 3;
+}
+/* Akhir Latihan 1 - Flexbox   */
+
+/* Latihan 2 - Flexbox   */
+.container-dua{
+    width: 80%;
+    margin: 50px auto;
+}
+.layanan{
+    padding: 20px;
+    box-sizing: border-box;
+}
+.layanan.satu{
+background-color: aqua;
+}
+.layanan.dua{
+    background-color: lightgreen;
+}
+.layanan.tiga{
+    background-color: lightseagreen;
+}
+
+
+
+
+
+.container-tiga{
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.thumbnail{
+    width: 50%;
+}
+.thumbnail img{
+    width: 100%;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+/* Latihan 4 */
+.container-empat{
+    width: 800px;
+    margin: 50px auto;
+    display: flex;
+}
+.card{
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    background-color: #eee;
+    overflow: hidden;
+    margin: 10px;
+    flex: 1;
+}
+.card.besar{
+    transform: scale(1.12);
+}
+.card .header{
+    height: 150px;
+  background-color: #666;
+}
+.card .content{
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Latihan 5 */
+.container-lima{
+    width: 600px;
+    height: 600px;
+    margin: 50px auto;
+    border: 10px solid black;
+    display: flex;
+    background-image: url(../../Belajar_HTML/image/love.jpg);
+    background-size: cover;
+    background-position: -50px;
+}
+
+.kotak{
+    width: 110px;
+    height: 110px;
+    background-color: rgba(32, 178, 170,0.5);
+    text-align: center;
+    margin:  auto;
+    display: flex;
+}
+
+.kotak span{
+    color: rgba(255, 254, 254, 0.9);
+    margin: auto;
+}
+
+/* Responsive */
+@media( min-width:720px){
+    .container-dua{
+        display: flex;
+        justify-content: space-between;
+    }
+    .layanan{
+        width: 30%;
+    }
+    .thumbnail{
+        width: 25%;
+    }
+    
+}
+
+
+

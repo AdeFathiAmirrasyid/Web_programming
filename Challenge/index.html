@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge_</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style-index.css" />
+  </head>
+
+  <body>
+    <!--------------- Navbar ---------------->
+    <div class="nav_bar"></div>
+    <div class="container">
+      <!--------------- header ---------------->
+      <div class="header">
+        <img src="onepiece/boa.jpg" alt="Boa Hancock" />
+        <div class="search">
+          <img src="onepiece/search1.png" alt="Search" />
+          <span>Cari di website</span>
+
+          <div class="kotak1"></div>
+          <div class="kotak2"></div>
+          <div class="kotak3"></div>
+
+          <div class="image-galeri">
+            <div class="image1">
+              <img src="onepiece/dracule_mihawk.jpg" alt="Dracule Mihawk" />
+            </div>
+            <div class="image2">
+              <img src="onepiece/shank.jpg" alt="Akagami no shank" />
+            </div>
+            <div class="image3">
+              <img src="onepiece/law.png" alt="Dracule Mihawk" />
+            </div>
+            <div class="image4">
+              <img src="onepiece/marko.jpg" alt="Marko the Phoniex" />
+            </div>
+            <div class="image5">
+              <img src="onepiece/vivi.png" alt="Nevetari Vivi" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!------------------------------ Content ------------------------------------------>
+
+      <!-- content-satu -->
+      <div id="content" class="content-satu">
+        <img src="onepiece/boa.jpg" alt="Boa Hancock" />
+
+        <div class="box-1"></div>
+        <div class="box-2"></div>
+        <div class="box-3"></div>
+        <div class="box-4"></div>
+        <div class="box-5"></div>
+        <div class="box-6"></div>
+        <div class="box-7"></div>
+        <div class="box-8"></div>
+        <div class="box-9"></div>
+        <div class="box-10"></div>
+        <div class="box-11"></div>
+        <div class="box-12">
+          <span>See more ...</span>
+        </div>
+      </div>
+      <!-- content-dua -->
+      <div class="content-dua">
+        <div class="create_posst">
+          <h3 id="show" class="show">show left bar...</h3>
+          <h3 id="close" class="close">hidden left bar...</h3>
+          <div class="cf"></div>
+          <h5>Create Post</h5>
+          <div class="isi-post"></div>
+
+          <div class="isi1"></div>
+          <div class="isi2"></div>
+          <div class="isi3"></div>
+          <div class="isi4"></div>
+        </div>
+
+        <div class="stories">
+          <h5>Stories</h5>
+          <div class="isi-stories1"></div>
+          <div class="isi-stories2"></div>
+          <div class="isi-stories3"></div>
+          <div class="isi-stories4"></div>
+        </div>
+
+        <!------- name-status -------->
+        <div class="name-status">
+          <h5>Ade Fathi Amirrasyid</h5>
+          <img src="onepiece/boa.jpg" alt="Boa Hancock" />
+          <div class="isi-status1"></div>
+          <div class="isi-status0"></div>
+          <div class="isi-status2"></div>
+          <div class="isi-status3"></div>
+          <div class="isi-status4"></div>
+        </div>
+      </div>
+
+      <!-- content-tiga -->
+      <div class="content-tiga">
+        <div class="sidebar-rigth1">
+          <div class="isi-sidebar-rigth0"></div>
+        </div>
+        <div class="sidebar-rigth2">
+          <h5>Listing recently viewed</h5>
+          <div class="isi-sidebar-rigth1"></div>
+          <div class="isi-sidebar-rigth2"></div>
+          <div class="isi-sidebar-rigth3"></div>
+          <div class="isi-sidebar-rigth4"></div>
+          <div class="isi-sidebar-rigth5">
+            <span>See more..</span>
+          </div>
+        </div>
+        <div class="sidebar-rigth3">
+          <h5>People you may know</h5>
+          <span>See all</span>
+          <div class="isi-sidebar-see1"></div>
+          <div class="isi-sidebar-see2"></div>
+          <div class="isi-sidebar-see3"></div>
+        </div>
+      </div>
+
+      <!------- Obrolan Atau Chat -------->
+      <div class="chat">
+        <div class="background-chat">
+          <span>Chat (30)</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var sidebar = document.getElementById("content");
+      var tampil = document.getElementById("show");
+      var hidden = document.getElementById("close");
+      tampil.addEventListener("click", function () {
+        sidebar.style.display = "block";
+      });
+      hidden.addEventListener("click", function () {
+        sidebar.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

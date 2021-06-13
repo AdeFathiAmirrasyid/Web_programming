@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>My Videos</h3>
+    <ul>
+      <li data-duration="15:27">Teknik Pomodoro</li>
+      <li data-duration="11:18">JAVASCRIPT LANJUTAN | Higer Order Functions</li>
+      <li data-duration="21:40">JAVASCRIPT LANJUTAN | This Pada Arrow Functions</li>
+      <li data-duration="19:38">Website Penipu</li>
+      <li data-duration="12:10">JAVASCRIPT LANJUTAN | Arrow Functions</li>
+      <li data-duration="20:43">JAVASCRIPT LANJUTAN | Closure</li>
+      <li data-duration="14:30">Tanya Pasandika galih</li>
+      <li data-duration="26:38">JAVASCRIPT LANJUTAN | Executions Context</li>
+      <li data-duration="17:33">JAVASCRIPT LANJUTAN | Prototype</li>
+      <li data-duration="10:39">JAVASCRIPT LANJUTAN | Object Create()</li>
+      <li data-duration="17:31">JAVASCRIPT LANJUTAN | Object (Revisited)</li>
+      <li data-duration="14:25">Tips Betanya ketika error</li>
+    </ul>
+
+    <h3>My Playlist</h3>
+    <ol>
+      <li>
+        <h4>JAVASCRIPT LANJUTAN</h4>
+        <p>Jumlah Vidio : <span class="jumlah-vidio"></span></p>
+        <p>Total Durasi : <span class="total-durasi"></span></p>
+      </li>
+    </ol>
+
+    <script>
+      // Ambil Semua Element Vidio
+      const videos = Array.from(document.querySelectorAll("[data-duration]"));
+      // Pilih Playlist Yang "JAVASCRIPT LANJUTAN"
+      let jsLanjut = videos
+        .filter((videose) => videose.textContent.includes("JAVASCRIPT LANJUTAN"))
+        //Ambil Masing - Masing vidio
+        .map((item) => item.dataset.duration)
+        // Ubah Duration Menjadi float, ubah menit menjadi detik
+        .map((waktu) => {
+          const parts = waktu.split(":").map((part) => parseFloat(part));
+          return parts[0] * 60 + parts[1];
+        })
+
+        //Jumlahkan Semua Detik
+        .reduce((total, detik) => total + detik);
+      // Ubah Formatnya jadi jam menit detik
+      const jam = Math.floor(jsLanjut / 3600);
+      jsLanjut = jsLanjut - jam * 3600;
+      const menit = Math.floor(jsLanjut / 60);
+      const detik = jsLanjut - menit * 60;
+
+      const pDurasi = document.querySelector(".total-durasi");
+      pDurasi.textContent = `${jam} Jam ${menit} Menit ${detik} Detik `;
+      const jmlVidio = videos.filter((videose) => videose.textContent.includes("JAVASCRIPT LANJUTAN")).length;
+      const pJmlVidio = document.querySelector(".jumlah-vidio");
+      pJmlVidio.textContent = `${jmlVidio} Jumlah Vidio`;
+
+        const el = `div.mhs `
+    </script>
+  </body>
+</html>

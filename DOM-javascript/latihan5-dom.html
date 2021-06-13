@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Merubah warna</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        padding: auto;
+        margin: auto;
+        text-align: center;
+      }
+      .biru-muda {
+        background-color: aqua;
+      }
+      .kotak {
+        width: 25px;
+        height: 25px;
+        margin: 10px auto;
+      }
+      .merah {
+        background-color: red;
+      }
+      .biru {
+        background-color: blue;
+      }
+      .hijau {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <bod>
+    <h1>Bermain Dengan Warna</h1>
+    <button type="submit" id="btn_ubahWarna">Ubah Warna</button>
+
+    <br /><br />
+    <div class="kotak merah"></div>
+    <input type="range" name="sliderMerah" min="0" max="255" />
+    <div class="kotak hijau"></div>
+    <input type="range" name="sliderHijau" min="0" max="255" />
+    <div class="kotak biru"></div>
+    <input type="range" name="sliderBiru" min="0" max="255" />
+
+    <!-- File Js -->
+    <script>
+      const textWarna = document.querySelector("h1");
+      const ubahWarna = document.getElementById("btn_ubahWarna");
+
+      ubahWarna.addEventListener("click", function () {
+        document.body.classList.toggle("biru-muda");
+      });
+
+      const btn_acakWarna = document.createElement("button");
+      const textAcakWarna = document.createTextNode("Acak Warna");
+      btn_acakWarna.setAttribute("type", "button");
+      btn_acakWarna.appendChild(textAcakWarna);
+
+      ubahWarna.after(btn_acakWarna);
+
+      btn_acakWarna.addEventListener("click", function () {
+        const r = Math.round(Math.random() * 255 + 1);
+        const g = Math.round(Math.random() * 255 + 1);
+        const b = Math.round(Math.random() * 255 + 1);
+        document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+      });
+
+      const sliderMerah = document.querySelector("input[name=sliderMerah]");
+      const sliderHijau = document.querySelector("input[name=sliderHijau]");
+      const sliderBiru = document.querySelector("input[name=sliderBiru]");
+
+      sliderMerah.addEventListener("input", function () {
+        const r = sliderMerah.value;
+        const g = sliderHijau.value;
+        const b = sliderBiru.value;
+        document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+      });
+      sliderHijau.addEventListener("input", function () {
+        const r = sliderMerah.value;
+        const g = sliderHijau.value;
+        const b = sliderBiru.value;
+        document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+      });
+      sliderBiru.addEventListener("input", function () {
+        const r = sliderMerah.value;
+        const g = sliderHijau.value;
+        const b = sliderBiru.value;
+        document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+      });
+
+      document.body.addEventListener("mousemove", function (event) {
+        const xPost = Math.round((event.clientX / window.innerWidth) * 255);
+        const yPost = Math.round((event.clientY / window.innerHeight) * 255);
+        document.body.style.backgroundColor = "rgb(" + xPost + "," + yPost + ",100)";
+      });
+    </script>
+  </bod>
+</html>

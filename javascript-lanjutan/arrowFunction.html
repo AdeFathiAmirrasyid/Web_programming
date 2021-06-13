@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Arrow Function
+      const tampilNamaArrow = (name) => {
+        return `Hello ${name}`;
+      };
+
+      console.log("insanie_fathie");
+
+      // Implisit return
+      const tampilNama = (name) => `Hello ${name}`;
+
+      console.log(tampilNama("insanie"));
+
+      let mahasiswa = ["Diah Insanie", "Alisia Setianie", "Fathie_Insanie"];
+      //   Menggunakan Funtion Expresions
+      const jumlahHurufBiasa = mahasiswa.map(function (name) {
+        return name.length;
+      });
+      console.log(jumlahHurufBiasa);
+
+      //   menggunakan arrow function
+      const jumlahHurufArrow = mahasiswa.map((name) => name.length);
+      console.log(jumlahHurufArrow);
+
+      //   Menggunakan object
+      const jumlahHurufTampil = mahasiswa.map((name) => ({ name, jmlHuruf: name.length }));
+      console.table(jumlahHurufTampil);
+      //   konsep this pada arrow function
+      //Constructor function
+      
+      
+    </script>
+  </body>
+</html>

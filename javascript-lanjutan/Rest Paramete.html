@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   Filtering
+      function filterby(type, ...values) {
+        return values.filter((v) => typeof v === type);
+      }
+      console.log(filterby("string", 1, 2, 3, 4, "Insanie", false, true, 10, 22, true, "alisia"));
+
+      const team = {
+        ketua: "Insanie",
+        wakil: "Alisia",
+        sekertaris: "Sautome Mery",
+        bendahara: "Jabamy Yumeko",
+      };
+      const { ketua, wakil, ...anggota } = team;
+      console.log(anggota);
+
+      console.log("1");
+      setTimeout(function(){
+        console.log("2");
+      },5000)
+      console.log("3");
+    </script>
+  </body>
+</html>

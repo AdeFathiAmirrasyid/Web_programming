@@ -1,0 +1,28 @@
+@mixin inline-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+.header ul {
+  @include inline-list();
+  li {
+    background-color: aqua;
+    padding: 10px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.footer ul {
+  @include inline-list();
+  li {
+    background-color: salmon;
+    padding: 10px;
+  }
+  a {
+    text-decoration: none;
+  }
+}

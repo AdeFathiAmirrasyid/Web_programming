@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const angka = [-1, 8, 9, 1, 4, -5, -4, 3, 2, 9];
+
+      //   Menggunakan for biasa
+      const newAngka = [];
+      for (let i = 0; i <= angka.length; i++) {
+        if (angka[i] >= 3) {
+          newAngka.push(angka[i]);
+        }
+      }
+      console.log(newAngka);
+
+      //Menggunakan Filter function
+      const newAngkaFilter = angka.filter((a) => a >= 3);
+      console.log(newAngkaFilter);
+
+      //   Menggunakan Map function
+      const newAngkaMap = angka.map((a) => a * 2);
+      console.log(angka);
+      console.log(newAngkaMap);
+
+      //   Reduce
+      //   Reduce Menjumlahkan seluruh element pada array
+      //   0 + -1 + 8 + 9 + 1 + 4 + -5 + -4 + 3 + 2 + 9
+      const newAngkaReduce = angka.reduce((accumulator, currentValue) => accumulator + currentValue, 5);
+      console.log(newAngkaReduce);
+
+      //   Method Chaining
+      //   cari angka > 5
+      //   kalikan 3
+      //   jumlahkan
+
+      const hasil = angka
+        .filter((a) => a >= 5)
+        .map((a) => a * 3)
+        .reduce((acc, cur) => acc + cur);
+        console.log(hasil)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   Destructuring Varable / Assigment
+
+      //   Menggunakan Array biasa
+      const perkenalan = ["hallo", "nama", "saya", "Diah Insanie"];
+      const salam = perkenalan[0];
+      const nama = perkenalan[3];
+      console.log(nama);
+      //  Destructuring Array
+      const perkenalanDestructuring = ["hallo", "nama", "saya", "Diah Insanie"];
+      //   const [salam1, satu, dua, nama1] = perkenalanDestructuring;
+      //Skipting Items
+      const [salam1, , , nama1] = perkenalanDestructuring;
+      console.log(nama1);
+
+      //   Swap Items / Menukar suatu nilai
+      let a = 1;
+      let b = 2;
+      console.log(a);
+      console.log(b);
+      [a, b] = [b, a];
+      console.log(a);
+      console.log(b);
+
+      //   Return value pada function
+
+      console.log("========");
+      function coba() {
+        return [1, 2];
+      }
+
+      const [c, d] = coba();
+      console.log(d);
+
+      //   Rest parameter
+      const [e, ...value] = [1, 2, 3, 4, 5, 6, 7];
+      console.log(e);
+      console.log(value);
+
+      // Destructuring Object
+      const mhs = {
+        name: "Alisia Setianie",
+        umur: 23,
+      };
+      const { name, umur } = mhs;
+      console.log(name);
+
+      //   Assigment tanpa deklarasi object
+      ({ name1, umur1 } = {
+        name1: "Diah Insanie",
+        umur1: 23,
+      });
+      console.log(name1);
+
+      //   assign Ke variable baru
+      const mhs1 = {
+        name: "Alisia Fathie",
+        umur: 23,
+      };
+      const { name: n, umur: u } = mhs1;
+      console.log(n);
+
+      //   Memberikan Default value
+      const mhs2 = {
+        name2: "Fathie Insanie",
+        umur2: 23,
+        email: "fathieInsani@gmail.com",
+      };
+      const { name2, umur2, email = "email@gmail.com" } = mhs2;
+      console.log(email);
+
+      //   Memberi nilai default dan assign ke variable baru
+      const mhs3 = {
+        name3: "Fathie Insanie",
+        umur3: 23,
+        email3: "fathieInsani@gmail.com",
+      };
+      const { name3: na, umur3: um, email3: em = "email@gmail.com" } = mhs3;
+      console.log(em);
+
+      //   Rest Parameter
+      const mhs4 = {
+        name4: "Fathie Insanie alisia",
+        umur4: 23,
+        email4: "fathieInsani@gmail.com",
+      };
+      const { name4, ...values } = mhs4;
+      console.log(name4);
+      console.log(values);
+
+      //   Mengambil filed pada object, setelah dikirim  sebagai parameter untuk function
+      const mhs5 = {
+        id: 12345,
+        name5: "Fathie  alisia",
+        umur5: 23,
+        email5: "fathieInsani@gmail.com",
+      };
+
+      console.log("=====");
+      function getIdmhs({id}) {
+        return id;
+      }
+      console.log(getIdmhs(mhs5));
+    </script>
+  </body>
+</html>

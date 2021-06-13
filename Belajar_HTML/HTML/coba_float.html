@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coba float</title>
+</head>
+<style>
+    .container{
+        width: 800px;
+        border: 1px solid black;
+        margin: auto;
+        padding: 5px; 
+     
+    }
+    .satu{
+        box-sizing: border-box;
+        width: 150px;
+        height: 500px;
+        float: left;
+        padding: 10px;
+        background-color: brown;
+    }
+    .dua{
+       
+        background: fuchsia;
+        width: 500px;
+        height: 500px;
+        float: left;
+       
+    }
+    .tiga{
+        background: forestgreen;
+        height: 500px;
+        width: 150px;
+        float: left;
+    }
+    .clear{
+        clear: both;
+    }
+
+
+    .satu1{
+        height: 100px;
+        width: 100px;
+        background-color: brown;
+    }
+    .dua2{
+       
+        background: fuchsia;
+        height: 100px;
+        width: 100px;
+        top: 20px;
+        left: 50px;
+        position: relative;   
+    }
+    .tiga3{
+        background: forestgreen;
+        height: 100px;
+        width: 100px;
+    }
+
+    .satu_{
+        background-color: brown;
+        height: 100px;
+        width: 100px;  
+    }
+    .dua_{
+       
+        background: fuchsia;
+        height: 40px;
+        left: 0px;
+        top: 0;
+        position: fixed;
+        width: 100%;  
+    }
+    .tiga_{
+        background: forestgreen;
+        height: 100px;
+        width: 100px;   
+    }
+    .container_{
+        margin: auto;
+        position: relative;
+        border: 10px solid black;
+        width: 650px;
+        height: 650px;
+    }
+
+    .container_1{
+       margin-top: 20px;
+       margin-bottom: 20px;
+       border: 10px solid black;
+       width: 650px;
+      
+   }
+
+</style>
+<body>
+  <div class="container">
+      <div class="satu"></div>
+      <div class="dua"></div>
+      <div class="tiga"></div>   
+      <div class="clear"></div> 
+  </div>
+
+  <div class="container_1">
+  <h1>----------RELATIVE-----------</h1>
+  <div class="satu1"></div>
+  <div class="dua2"></div>
+  <div class="tiga3"></div> 
+</div>
+
+  <div class="container_">
+    <h1>----------ABSOLUTE-----------</h1>
+    <div class="satu_"></div>
+    <div class="dua_"></div>
+    <div class="tiga_"></div> 
+  </div>
+</body>
+</html>

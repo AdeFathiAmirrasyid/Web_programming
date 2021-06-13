@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear gradien</title>
+    <style>
+        div img {
+            width: 500px;
+            height: 300px;
+            margin-left: 30%;
+            margin-top: 30px;
+            filter: drop-shadow(10px 10px 10px black);
+        }
+
+        /* --------------- filter blur -------------------- */
+
+        /* 
+         filter: blur(10px);             => untuk ngeblur
+         filter: brightness(200%);       => untuk mencerahkan gambar atau menggelapkan gambar 
+         filter: contrast(200%);         => untuk contrastkan gambar cerah atau gelap
+         filter: saturate(50%);          => untuk  cerah atau gelap kan gambar
+         filter: grayscale(100%);        => default nya warna abu-abu
+         filter: sepia(100%);            => lebih ke kuning sunset
+         filter: hue-rotate(-100deg);    => roda warna 
+         filter: invert(100%);           => efek negativ film
+         filter: opacity(0.2);           => transparan
+        */
+
+
+        /* --------------- Transform -------------------- */
+        /* scaleX(2) scaleY(1)                                       => memperbesar ukuran
+           rotate(180deg)  rotateX(180deg) rotateY(180deg)           => untuk memutar object tersebut
+           rotate(180deg)  rotateX(180deg) rotateY(180deg) scaleX(3) => multiple transform
+           skewX(-50deg)                                             => merubah posisi yang tadinya kotak menjadi jajar genjang
+           translateX(100px) translateY(200px)                       => menggeser kesamping dan ke bawah
+
+
+           contoh multiple
+            transform: translateX(100px) translateY(200px) scale(3) rotate(360deg);
+        */
+        p {
+            font-size: 20px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .kotak {
+            width: 200px;
+            height: 200px;
+            background-color: lightseagreen;
+            margin: 20px auto 0;
+            transition: 2s;
+        }
+
+        .kotak:hover {
+            transform: translateX(100px) translateY(200px) scale(3) rotate(360deg);
+        }
+
+        .kotak1 {
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            background-color: lightgreen;
+            animation: animasions 2s ease 3 alternate forwards ;
+        }
+
+        @keyframes animasions {
+            0% {
+                width: 200px;
+            }
+            50%{
+                width: 500px;
+                height: 200px;
+            }
+            100%{
+                width: 500px;
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="../image/luffy.jpg" alt="adefathi">
+    </div>
+    <div class="kotak"></div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptatibus sed sit rem! Accusantium eum
+        deserunt excepturi facere accusamus mollitia expedita et debitis molestias minima cumque earum esse, atque
+        fugiat!</p>
+    <div class="kotak1"></div>
+
+</body>
+
+</html>

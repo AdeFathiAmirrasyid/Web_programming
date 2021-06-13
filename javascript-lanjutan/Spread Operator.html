@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread Operator</title>
+    <style>
+      body {
+        background-color: slateblue;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .name {
+        font-family: sans-serif;
+       
+        font-size: 50px;
+        color: white;
+      }
+      .name span{
+          cursor: pointer;
+      }
+      .name span:hover {
+          display: inline-block;
+        transition: 0.3s;
+        transform: scale(2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="name">Fathie_Insanie</div>
+    <script>
+      //   Spread Operator
+      // Memecah iterables menjadi single element
+      const name = document.querySelector(".name");
+      const huruf = [...name.textContent].map((h) => `<span>${h}</span>`).join("");
+      name.innerHTML = huruf;
+    </script>
+  </body>
+</html>
