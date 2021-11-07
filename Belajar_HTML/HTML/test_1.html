@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hallo</h1>
+  </body>
+  <script>
+          // console.log("1. abc");
+
+          // const flipACoin = new Promise((resolve, reject) => {
+          //   console.log("2. cde");
+
+          //   const flipResult = flip();
+
+          //   if (flipResult) {
+          //     console.log("3. efg");
+
+          //     resolve();
+          //   } else {
+          //     reject();
+          //   }
+          // });
+
+          // console.log("4. Hij");
+          // const qty = 1;
+          // if (qty = 0 ) {
+          //   console.log("abc");
+
+          // } else {
+          //   console.log("cde");
+          // }
+          // if (("validated", "cancelled") && qty > 0) {
+          //   console.log("cde");
+          // } else {
+
+          //   console.log("abc");
+          // }
+
+          // class App {
+          //   constructor() {
+          //     this.factor = 10;
+          //   }
+
+          //   multiplyByTen(value) {
+          //     setTimeout(function () {
+          //       console.log("value: " + value);
+
+          //       console.log("result: " + value * this.factor);
+          //     }, 200);
+          //   }
+          // }
+
+          // var sampleApp = new App();
+
+          // sampleApp.multiplyByTen(20);
+
+          class OrderLines {
+            constructor() {
+              this.quantity = 10;
+              this.price = 1000;
+            }
+
+            getQuantity() {
+              return this.quantity;
+            }
+
+            getPrice() {
+              return this.price;
+            }
+          }
+
+          class Order {
+            constructor() {
+              this.total = 0;
+
+              this.lines = [new OrderLines(), new OrderLines()];
+            }
+
+            calculateTotal() {
+              // get Total Sale Order (sum of all order lines quantity * price)
+ 
+
+            }
+          }
+
+          var sampleApp = new Order();
+
+          console.log(sampleApp.calculateTotal());
+  </script>
+</html>

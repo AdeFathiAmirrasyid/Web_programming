@@ -1,6 +1,7 @@
 <?php
 
-use App\Models\Posts;
+use App\Http\Controllers\PostController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,18 +17,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home',[
-        "title" => "Home"
+        'title' => 'Home'
+    ]);
+});
+Route::get('/about', function () {
+    return view('about',[
+        'title' => 'About',
+        'name' => 'Ade fathi amirrasyid',
+        'email' => 'adefathi@gmail.com',
+        'image' => 'marko.jpg'
     ]);
 });
 
-Route::get('/about', function () {
-    return view('about',[
-        "title" => "About"
-    ]);
-});
-Route::get('/posts', function () {
-    return view('posts',[
-        "title" => "posts",
-        "posts" => Posts::all()
-    ]);
-});
+Route::get('/posts',[PostController::class,'index']);
+Route::get('/posts/{post:slug}',[PostController::class,'show']);
+
+
+
