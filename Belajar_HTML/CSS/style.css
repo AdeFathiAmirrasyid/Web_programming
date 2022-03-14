@@ -1,0 +1,63 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: #dde1e7;
+}
+.container-new{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: #FFFFFF;
+}
+.kotak-coba{
+   height: 100px;
+   width: 100px;
+   border-radius: 10px;
+   background-color: #FFFFFF;
+   box-shadow: -3px -3px 7px #dde1e7, 3px 3px 5px rgba(94, 104, 121, .288);
+   margin: 20px;
+}
+.kotak-1{
+   height: 50px;
+   width: 100px;
+   border-radius: 10px;
+   background-color: #dde1e7;
+   box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, .288);
+}
+.kotak-2{
+   margin: 30px;
+   height: 100px;
+   width: 100px;
+   border-radius: 10px;
+   background-color: #dde1e7;
+   box-shadow: inset -3px -3px 7px #ffffff73, inset 3px 3px 5px rgba(94, 104, 121, .288);
+}
+.kotak-3{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #dde1e7;
+  box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, .288);
+  position: relative;
+}
+.kotak-3::after{
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: inset -3px -3px 7px #ffffff73, inset 3px 3px 5px rgba(94, 104, 121, .288);
+}
