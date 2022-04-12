@@ -126,6 +126,16 @@ font-size: 18px;
   border-radius: 30px;
 }
 
+/* Scrollba */
+html::-webkit-scrollbar,
+.element::-webkit-scrollbar {
+    display: none;
+}
+html {
+    scrollbar-width: none;
+}
+/* Akhir Scrollba */
+
 /* DESkTOP VERSION  */
 @media (min-width: 992px) {
   .navbar-brand,
