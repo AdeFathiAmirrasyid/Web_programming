@@ -1,0 +1,40 @@
+.navbar {
+  background-color: #0f9979;
+}
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #e2edff;
+}
+#projects {
+  background-color: #e2edff;
+}
+
+
+/*----- Footer -----*/
+footer,
+.btn{
+    background-color: #0f9979;
+}
+footer p,
+.btn {
+  color: white;
+}
+footer a {
+  color: white;
+  font-weight: bold;
+}
+
+section{
+    padding-top: 5rem;
+}
+
+.ig-thumbnail{
+  width: 100px;
+  height: 100px;
+  float: left;
+  overflow: hidden;
+}
+
+.ig-thumbnail img{
+  width: 100px;
+}
